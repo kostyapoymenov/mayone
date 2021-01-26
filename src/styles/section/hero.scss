@@ -1,0 +1,39 @@
+.hero {
+  background-color: $black;
+  padding-top: rem(100px);
+  &::after {
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    background-color: rgba($color: #000000, $alpha: .75);
+    z-index: 1;
+  }
+}
+.hero-background {
+  background: url(../images/bg/kamera.png) no-repeat;
+  background-size: cover;
+}
+.hero {
+  .container {
+    z-index: 2;
+  }
+}
+.hero__block {
+  max-width: rem(312px);
+  margin: 0 auto;
+  padding: rem(110px) 0 rem(110px);
+}
+.hero__title {
+  @include font-size(24px);
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: rem(25px);
+  font-family: FuturaPT;
+  font-weight: 500;
+}
+.hero__block_btn {
+  text-align: center;
+}

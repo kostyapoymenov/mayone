@@ -1,0 +1,18 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about__left {
+  flex: 2 1;
+  min-width: rem(200px);
+  max-height: rem(638px);
+  overflow: hidden;
+}
+.about__right_img {
+  width: 100%;
+}
+.about__right {
+  flex: 3 1;
+  min-width: rem(300px);
+  padding-left: rem(35px);
+}

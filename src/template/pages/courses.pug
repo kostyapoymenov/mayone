@@ -1,0 +1,102 @@
+extends ../loyout
+
+block variables
+    - var title= "MAYONE.PRO"
+block content
+    header.header
+        .container
+            .header__top
+                a.logo(href="")
+                    svg.logo__svg(width='100%' height='100%')
+                        use(xlink:href=`images/icons/sprite.svg#MAYONEPRO`)
+            .header__bottom
+                nav.nav
+                    ul.nav__list
+                        li.nav__item
+                            a.nav__link.nav__link--active(href="#first" onclick="return anchorScroller(this)") Главная
+                        li.nav__item
+                            a.nav__link(href="#about" onclick="return anchorScroller(this)") О курсе
+                        li.nav__item
+                            a.nav__link(href="#programs" onclick="return anchorScroller(this)") Программа
+                        li.nav__item
+                            a.nav__link(href="#cost" onclick="return anchorScroller(this)") Стоимость
+                        li.nav__item
+                            a.nav__link(href="#feedback" onclick="return anchorScroller(this)") FAQ
+                        li.nav__item
+                            a.nav__link(href="#application" onclick="return anchorScroller(this)") Обучение
+        .header__social
+            .social
+                -
+                    var socials = [
+                        ['inst','https://instagram.com/mayone.pro?igshid=ifxlt1rdey2h'],
+                        ['telegram','https://tmgo.me/rinamayone']
+                        ]
+                ul.social__list
+                    each social in socials
+                        li.social__item
+                            a(class=`social__link social__link_${social[0]}` href=`${social[1]}` target="_blank")
+                                svg.social__link_svg(width='100%' height='100%')
+                                    use(xlink:href=`images/icons/sprite.svg#${social[0]}`)
+    section.hero.first#first
+      .container
+        .first__block
+          .first__content
+            .first__content-description
+              h1.first__content_title авторский курс от rina mayone
+                span.first__content_subtitle Motion - design с нуля
+              .line-quote-text "
+              p.first__content_text “Когда вы покупаете обучение, вы получаете не просто объяснение команд, которые нужно использовать.
+              p.first__content_text.first__content_text--short.text-bold Вы покупаете навык и возможность зарабатывать на том, что нравится”
+            .first__content_btns
+              .btn.btn--gold-gradient ЗАПИСАТЬСЯ
+              .btn.btn--black-white программа курса
+          .first__pictures
+            img.first__pictures_img(src="images/content/first-img.png", alt="MAYONEPRO")  
+    section.section
+      .container
+        h2.section-title Думаете, что моушн-дизайн это сложно?
+          .double-triangle
+            svg.double-triangle_svg(width="42" height="45" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M27 56L3.61731 21.5L50.3827 21.5L27 56Z", fill="black")
+              path(d="M48.4969 12.5L27 44.2176L5.50311 12.5L48.4969 12.5Z", stroke="url(#paint0_linear)", stroke-width="2")
+              defs
+                linearGradient(id="paint0_linear", x1="27", y1="46", x2="27", y2="0", gradientUnits="userSpaceOnUse")
+                  stop(stop-color="#F9E0B0")
+                  stop(offset="1", stop-color="#855024")
+        h2.section-title Да!
+        .subtitle-text.subtitle-text--center 
+          p И хорошо оплачивается :)
+          p.text-bold А научиться может абсолютно каждый 
+        video.video(controls poster="images/bg/video-1.png" preload="none")
+          source(src="video/video-1.mp4" type="video/mp4")
+    section.section.section--border-gold.section-profession
+      .container
+        h2.section-title.text-light 
+          span.text-bold новая профессия
+          |  через 5 недель
+        .profession
+          .card-block.card-block--three-card
+            .card-block__item
+              .card.card--icon-text
+                .card-icon
+                  img(src="images/icons/profession-1.png", alt="")
+                .card-description
+                  p.text-bold Видео - это 80%  контента в интернете.
+                  p И популярность этого формата только растет. А специалистов, умеющих работать в проф.софте катастрофически не хватает.
+            .card-block__item
+              .card.card--icon-text
+                .card-icon
+                  img(src="images/icons/profession-2.png", alt="")
+                .card-description
+                  p Пока остальные монтируют по шаблонам на телефоне, вы учитесь создавать 
+                    span.text-bold уникальные творческие проекты 
+                    | для любых сфер.
+                  p И выходите на рынок, как специалист.
+            .card-block__item
+              .card.card--icon-text
+                .card-icon
+                  img(src="images/icons/profession-3.png", alt="")
+                .card-description
+                  p КАЧЕСТВЕННЫЙ ВИДЕОКОНТЕНТ УВЕЛИЧИВАЕТ 
+                    span.text-bold  ВОВЛЕЧЕННОСТЬ, ПРОДАЖИ И ДОВЕРИЕ. 
+                    | это ТРИ САМЫХ ВАЖНЫХ ПОКАЗАТЕЛЯ ДЛЯ ЛЮБых ПРЕДПРИНИМАТЕЛей, и они готовы за них платить

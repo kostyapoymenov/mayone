@@ -1,0 +1,125 @@
+.burger-block {
+  display: none;
+  width: 43px;
+  height: 54px;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 10px;
+  z-index: 300;
+}
+.burger {
+  display: block;
+  width: 35px;
+  height: 54px;
+  transition: all .4s;
+  cursor: pointer;
+  position: relative;
+  &--active {
+    .burger__line--1 {
+      animation: burgerline1 .4s forwards;
+    }
+    .burger__line--2 {
+      animation: burgerline2 .4s forwards;
+    }
+    .burger__line--3 {
+      animation: burgerline3 .4s forwards;
+    }
+  }
+}
+.burger__line {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  background: $white;
+  transition: all .4s;
+  pointer-events: none;
+  &--1 {
+    top: 16px;
+  }
+  &--2 {
+    top: 24px;
+  }
+  &--3 {
+    top: 32px;
+  }
+}
+@keyframes burgerline1 {
+  0% {
+      top: 16px;
+  }
+  50% {
+      top: 24px;
+      transform: rotate(0);
+  }
+  100% {
+      top: 24px;
+      transform: rotate(45deg);
+  }
+}
+@keyframes burgerline2 {
+  0% {}
+  50% {}
+  100% {
+      opacity: 0;
+  }
+}
+@keyframes burgerline3 {
+  0% {
+      top: 32px;
+  }
+  50% {
+      top: 24px;
+      transform: rotate(0);
+  }
+  100% {
+      top: 24px;
+      transform: rotate(-45deg);
+  }
+}
+.burger-menu { 
+  background-color: rgba(0, 0, 0, .95);
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: 200;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  &.burger-menu--active {
+    position: fixed;
+    display: flex;
+  }
+}
+.burger-nav {
+  height: 60%;
+}
+.burger-nav__item {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.burger-nav__link {
+  display: inline-block;
+  @include font-size(30px);
+  position: relative;
+  padding: 0 10px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 100%;
+    height: 2px;
+    width: 20px;
+    background: linear-gradient(to right, $darkGold, $lightGold);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 100%;
+    height: 2px;
+    width: 20px;
+    background: linear-gradient(to right, $lightGold, $darkGold);
+  }
+}

@@ -1,0 +1,378 @@
+extends ../loyout
+
+block variables
+    - var title= "MAYONE.PRO"
+block content
+    header.header
+        .container
+            .header__top
+                a.logo(href="")
+                    svg.logo__svg(width='100%' height='100%')
+                        use(xlink:href=`images/icons/sprite.svg#MAYONEPRO`)
+            .header__bottom
+                nav.nav
+                    ul.nav__list
+                        li.nav__item
+                            a.nav__link.nav__link--active(href="#hero" onclick="return anchorScroller(this)") Главная
+                        li.nav__item
+                            a.nav__link(href="#about" onclick="return anchorScroller(this)") Обо мне
+                        li.nav__item
+                            a.nav__link(href="#portfolio" onclick="return anchorScroller(this)") Портфолио
+                        li.nav__item
+                            a.nav__link(href="#service" onclick="return anchorScroller(this)") Услуги
+                        li.nav__item
+                            a.nav__link(href="#feedback" onclick="return anchorScroller(this)") Отзывы
+                        li.nav__item
+                            a.nav__link(href="#application" onclick="return anchorScroller(this)") Заказать съемку
+        .header__social
+            .social
+                -
+                    var socials = [
+                        ['inst','https://instagram.com/mayone.pro?igshid=ifxlt1rdey2h'],
+                        ['telegram','https://tmgo.me/rinamayone']
+                        ]
+                ul.social__list
+                    each social in socials
+                        li.social__item
+                            a(class=`social__link social__link_${social[0]}` href=`${social[1]}` target="_blank")
+                                svg.social__link_svg(width='100%' height='100%')
+                                    use(xlink:href=`images/icons/sprite.svg#${social[0]}`)
+    section.hero.hero-background#hero
+        .container
+            .hero__block
+                h1.hero__title
+                    span.quote “ 
+                    | Каждый ролик -
+                    br
+                    | это история, со своим
+                    br
+                    | стилем, настроением и послевкусием
+                    .double-triangle
+                        svg.double-triangle_svg(width="42" height="45" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M27 56L3.61731 21.5L50.3827 21.5L27 56Z", fill="white")
+                            path(d="M48.4969 12.5L27 44.2176L5.50311 12.5L48.4969 12.5Z", stroke="url(#paint0_linear)", stroke-width="2")
+                            defs
+                                linearGradient(id="paint0_linear", x1="27", y1="46", x2="27", y2="0", gradientUnits="userSpaceOnUse")
+                                    stop(stop-color="#F9E0B0")
+                                    stop(offset="1", stop-color="#855024")
+                .hero__block_btn.btn-order
+                    button.btn.btn-border-effect.btn-order Заказать 
+    section.section#about      
+        .container
+            .about
+                .about__left
+                    img.about__right_img(src="images/content/mayone.png")
+                .about__right
+                    h2.section-title.section-title--triangle.section-title--left Обо мне
+                    .text-block
+                        p высшее образование: СПБГУПТД, бакалавр, специальность: дизайн.
+                        p Дополнительное художественное образование в школе искусств.
+                    p.text Прошла курсы повышения квалификации:
+                    ul.text-list 
+                        li.text-list__item 3d Max
+                        li.text-list__item Motion Design
+                        li.text-list__item Режиссер рекламы
+                    .line-text 
+                    .text-block
+                        p «Ещё со школы я любила все, что связано с компьютерными программами и творчеством. Изучение программных пакетов Adobe я начала в 12 лет.
+                        p Опыт работы дизайнером-визуализатором дал мне представление о том, как важны детали, форма и цвет для передачи определённого стиля. А работа с оформлением социальных сетей научила выделять индивидуальность с помощью контента.
+                        p Однако, наибольшее удовольствие я получаю от работы с видео. Ничто так не сближает людей через экран, как видеоконтент. Видео - это жизнь, движение и эмоции.
+                        p Почему реклама? Реклама даёт людям то, что они больше всего ценят - возможность выбора.
+                        p Создание рекламы - это не только съемка красивых кадров, это поиск индивидуальности. Я создаю не только ролик-демонстрацию ваших услуг/продуктов/возможностей, но и ролик-историю. Такое видео поможет клиентам стать ближе к вам. Люди покупают у тех, кому доверяют.»
+                        .line-text.line-text--short
+                        p 
+                            b Рина Шишмарева
+    section.section.section--black.stat-section
+        .container
+            h2.section-title.section-title--white почему вам нужен видеоконтент:
+                .double-triangle
+                    svg.double-triangle_svg(width="42" height="45" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M27 56L3.61731 21.5L50.3827 21.5L27 56Z", fill="white")
+                        path(d="M48.4969 12.5L27 44.2176L5.50311 12.5L48.4969 12.5Z", stroke="url(#paint0_linear)", stroke-width="2")
+                        defs
+                            linearGradient(id="paint0_linear", x1="27", y1="46", x2="27", y2="0", gradientUnits="userSpaceOnUse")
+                                stop(stop-color="#F9E0B0")
+                                stop(offset="1", stop-color="#855024")
+            .stat
+                .stat__item
+                    .stat__item_top 
+                        span.stat__item_top-num.stat-num(data-num="4") 0
+                        | из 
+                        span.stat__item_top-num.stat-num(data-num="5") 0
+                    .line-text 
+                    .stat__item_descript потребителей считают, что демонстрационные видео полезны
+                .stat__item
+                    .stat__item_top почти 
+                        span.stat__item_top-num.stat-num(data-num="50") 0
+                        .stat__item_top-percent %
+                    .line-text
+                    .stat__item_descript интернет-пользователей ищут видео, связанные с продуктом или услугой, прежде чем посетить магазин
+                .stat__item
+                    .stat__item_top на 
+                        span.stat__item_top-num.stat-num(data-num="144") 0
+                        .stat__item_top-percent %
+                    .line-text
+                    .stat__item_descript могут увеличить покупки видеоролики о товарах
+            .stat-link
+                a.center-link(href="") Источник
+            .stat__descr Видеоконтент становится всё более востребованным
+    section#portfolio
+        .portfolio
+            .portfolio__item.portfolio__item--title
+                h2.section-title.section-title--triangle.section-title--left Портфолио
+            .portfolio__item.portfolio__item--one.portfolio__item--horiz
+                .portfolio__item_img(style="background-image:url(images/content/one.jpg)")
+                .potfolio__item_descript
+                    .portfolio__item_title urban samurai
+                    .portfolio__item_text зал для тренировки собак. Рекламный ролик, обзор возможностей и специалистов.
+                    .portfolio__item_link(data-link-video="https://www.youtube.com/embed/o-2x8o5Ui_k")
+            .portfolio__item.portfolio__item--two
+                .portfolio__item_img(style="background-image:url(images/content/two.jpg)")
+                .potfolio__item_descript
+                    .portfolio__item_title Видеопортрет
+                    .portfolio__item_text “Живая фотосессия”
+                    .portfolio__item_link(data-link-video="https://www.youtube.com/embed/tQA3pEBRQc0")
+            .portfolio__item.portfolio__item--three
+                .potfolio__item_descript
+                    .portfolio__item_title BullGames
+                    .portfolio__item_text Промо ролик соревнований для питбулей и стаффордов.
+                    .portfolio__item_link
+                .portfolio__item_img(style="background-image:url(images/content/three.jpg)")
+            .portfolio__item.portfolio__item--four
+                .portfolio__item_img(style="background-image:url(images/content/four.jpg)")
+                .potfolio__item_descript
+                    .portfolio__item_title Видеопортрет
+                    .portfolio__item_text Видеоролик для соц. сетей
+                    .portfolio__item_link
+            .portfolio__item.portfolio__item--five.portfolio__item--horiz
+                .potfolio__item_descript
+                    .portfolio__item_title Logo Das inter consulting
+                    .portfolio__item_text 2d анимация логотипа для роликов в соц.сетях
+                    .portfolio__item_link
+                .portfolio__item_img(style="background-image:url(images/content/five.jpg)")
+            .portfolio__item.portfolio__item--six.portfolio__item--horiz
+                .portfolio__item_img(style="background-image:url(images/content/six.jpg)")
+                .potfolio__item_descript
+                    .portfolio__item_title хоккей. СКА 2018
+                    .portfolio__item_text Промо ролик формата “как это было”
+                    .portfolio__item_link
+            .portfolio__item.portfolio__item--seven.portfolio__item--horiz
+                .potfolio__item_descript
+                    .portfolio__item_title makeup artist & photographer 
+                    .portfolio__item_text Промо ролик специалиста в сфере beauty
+                    .portfolio__item_link
+                .portfolio__item_img(style="background-image:url(images/content/seven.jpg)")
+            .portfolio__item.portfolio__item--eight.portfolio__item--horiz
+                .potfolio__item_descript
+                    .portfolio__item_title Goddes - салон красоты
+                    .portfolio__item_text Рекламный ролик для соц. сетей. Обзор нового салона и поступления косметики.
+                    .portfolio__item_link
+                .portfolio__item_img(style="background-image:url(images/content/eight.jpg)")
+            .portfolio__item.portfolio__item--nine
+                .portfolio__item_img
+                .potfolio__item_descript
+    section.section#service
+        .container
+            .service
+                h2.section-title Услуги
+                    .double-triangle
+                        svg.double-triangle_svg(width="42" height="45" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M27 56L3.61731 21.5L50.3827 21.5L27 56Z", fill="#000")
+                            path(d="M48.4969 12.5L27 44.2176L5.50311 12.5L48.4969 12.5Z", stroke="url(#paint0_linear)", stroke-width="2")
+                            defs
+                                linearGradient(id="paint0_linear", x1="27", y1="46", x2="27", y2="0", gradientUnits="userSpaceOnUse")
+                                    stop(stop-color="#F9E0B0")
+                                    stop(offset="1", stop-color="#855024")
+                .card-block.card-block--one-desc.card-block--white
+                    .card-block__item
+                        .card
+                            .card__title Видеопортрет
+                            .card__content
+                                .card__content_top
+                                    ul.card-list.card-list--check
+                                        li.card-list__item Сценарий
+                                        li.card-list__item 2 часа  съемки в выбранной вами локации
+                                        li.card-list__item монтаж
+                                        li.card-list__item 5 фотогрфии в ретуши
+                                .card__content_bottom готовый ролик для размещения в соц. сетях - 1мин.
+                            .card__order
+                                .card__order_price 5990&#8399;
+                                .card__order_btn
+                                    button.btn.btn--black.btn-order Заказать
+                    .card-block__item
+                        .section-subtitle.section-subtitle--line InstaVID
+                        .text-block.text-block--fs18
+                            p Видеопортрет - то, что позволит вам стать ближе с аудиторией, разнообразить ленту, добавить жизни в свой профиль. Через подобное видео можно передать любые эмоции и чувства, рассказать свою историю или просто выделиться среди однотипных фотографий.
+    section.section.section--black
+        .container
+            h2.section-subtitle.section-subtitle--line.section-subtitle--white BuisnessViD
+            .text-block.text-block--fs18.text-block--white
+                p Расскажу о вашем проекте/услугах/продукте. Если у клиента есть возможность увидеть и услышать вас, ваших сотрудников, посмотреть на производство и прочие процессы - уровень доверия возрастает в разы. Я не сторонник стандартной сухой рекламы “смотри это мой продукт”. Рекламный ролик должен вызывать эмоции и это как минимум.
+                p бронирование даты съемок по 50% предоплате
+            .card-block.card-block--three-card.card-block--black
+                    .card-block__item
+                        .card
+                            .card__title Реклама в социальных сетях
+                            .card__content
+                                .card__content_top
+                                    ul.card-list.card-list--check
+                                        li.card-list__item Сценарий
+                                        li.card-list__item 2 часа  съемки
+                                        li.card-list__item монтаж
+                                        li.card-list__item 5 фотогрфии в ретуши
+                                .card__content_bottom 
+                                    ol.card-sublist
+                                        li.card-sublist__item Ролик для instagram stories
+                                        li.card-sublist__item Ролик 60 секунд для соц. сетей
+                                        li.card-sublist__item Ролик 60 секунд для соц. сетей
+                            .card__order
+                                .card__order_price 25990&#8399;
+                                .card__order_btn
+                                    button.btn.btn--white.btn-order Заказать
+                    .card-block__item
+                        .card
+                            .card__title Рекламный ролик 
+                            .card__content
+                                .card__content_top
+                                    ul.card-list.card-list--check
+                                        li.card-list__item Сценарий
+                                        li.card-list__item 2 часа  съемки
+                                        li.card-list__item монтаж
+                                        li.card-list__item 5 фотогрфии в ретуши
+                                .card__content_bottom готовый ролик для размещения в соц. сетях - 1мин.
+                            .card__order
+                                .card__order_price 25990&#8399;
+                                .card__order_btn
+                                    button.btn.btn--white.btn-order Заказать
+                    .card-block__item
+                        .card
+                            .card__title VIP Промо + Реклама
+                            .card__content
+                                .card__content_top
+                                    ul.card-list.card-list--check
+                                        li.card-list__item Сценарий
+                                        li.card-list__item 2 часа  съемки
+                                        li.card-list__item монтаж
+                                        li.card-list__item 5 фотогрфии в ретуши
+                                .card__content_bottom готовый ролик для размещения в соц. сетях - 1мин.
+                            .card__order
+                                .card__order_price 25990&#8399;
+                                .card__order_btn
+                                    button.btn.btn--white.btn-order Заказать
+    section.section
+        .container
+            .service
+                h2.section-subtitle.section-subtitle--line.section-subtitle--center Motion Design
+                .card-block.card-block--two-card.card-block--white
+                    .card-block__item
+                        .card
+                            .card__title Видеопортрет
+                            .card__content
+                                .card__content_top
+                                    ul.card-list
+                                        li.card-list__item Сценарий
+                                        li.card-list__item 2 часа  съемки в выбранной вами локации
+                                        li.card-list__item монтаж
+                                        li.card-list__item 5 фотогрфии в ретуши
+                            .card__order
+                                .card__order_price 5990&#8399;
+                                .card__order_btn
+                                    button.btn.btn--black.btn-order Заказать
+                    .card-block__item
+                        .card
+                            .card__title Видеопортрет
+                            .card__content
+                                .card__content_top
+                                    ul.card-list
+                                        li.card-list__item Сценарий
+                                        li.card-list__item 2 часа  съемки в выбранной вами локации
+                                        li.card-list__item монтаж
+                                        li.card-list__item 5 фотогрфии в ретуши
+                            .card__order
+                                .card__order_price 5990&#8399;
+                                .card__order_btn
+                                    button.btn.btn--black.btn-order Заказать
+    section.section.section--black#feedback
+        .container
+            h2.section-title.section-title--white Отзывы
+                .double-triangle
+                    svg.double-triangle_svg(width="42" height="45" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M27 56L3.61731 21.5L50.3827 21.5L27 56Z", fill="white")
+                        path(d="M48.4969 12.5L27 44.2176L5.50311 12.5L48.4969 12.5Z", stroke="url(#paint0_linear)", stroke-width="2")
+                        defs
+                            linearGradient(id="paint0_linear", x1="27", y1="46", x2="27", y2="0", gradientUnits="userSpaceOnUse")
+                                stop(stop-color="#F9E0B0")
+                                stop(offset="1", stop-color="#855024")
+            .feedback.owl-carousel
+                .feedback__item 
+                    .feedback-avatar(style="background-image: url(images/content/two.jpg)")
+                    .feedback-text 
+                        .text-block.text-block--white.text-block--fs18
+                            p   “Я организатор спортивных соревнований для питбулей.Когда возникла необходимость снять для них просто ролик,подобрать человека,кто сможет это осуществить оказалось сложной задачей.Многие отказывались снимать так как боятся собак,кто-то делал абсолютно не то,что требуется.Не мог раскрыть идею,характер и посыл наших состязаний.Поэтому Рина оказалась для нас настоящей находкой!все именно так,как я хотела!))Все снято очень «вкусно» и с нужного мне «угла») Как итог новые спортсмены в наших рядах и огромное количество просмотров и хвалебных отзывов))”
+                    .feedback-name Юлия Пантас
+                    a.feedback-link(href="https://vk.com/kme90") https://vk.com/kme90
+                .feedback__item 
+                    .feedback-avatar(style="background-image: url(images/content/two.jpg)")
+                    .feedback-text 
+                        .text-block.text-block--white.text-block--fs18
+                            p   “Я организатор сsdasdsasd”
+                    .feedback-name Юлия Пантас 1
+                    a.feedback-link(href="https://vk.com/kme90") https://vk.com/kme90
+    section.section#application
+        .container
+            h2.section-title.section-title--triangle.section-title--left Заказ съемки
+            .application
+                form.form.card-block.card-block--three-card#form(action="" method="post" name="contact_form")
+                    .form-block.card-block__item
+                        .form-block__item.form-block__item--name
+                            label.form-block__label(for="name") Ваше имя
+                            input.form-block__field(type="text" name="name")
+                        .form-block__item.form-block__item--phone.error
+                            label.form-block__label(for="phone") Номер телефона
+                            input.form-block__field(type="text" name="phone")
+                        .form-block__item
+                            label.form-block__label(for="time-select") во сколько вам позвонить?
+                            select.form-block__field.form-block__select(name="time-select")
+                                option.form-block__option(value="0" selected="selected") В ЛЮБОЕ ВРЕМЯ
+                                option.form-block__option(value="1") 09:00 - 12:00 МСК
+                                option.form-block__option(value="2") 12:00 - 15:00 МСК
+                                option.form-block__option(value="3") 15:00 - 16:00 МСК
+                                option.form-block__option(value="4") 16:00 - 19:00 МСК
+                                option.form-block__option(value="5") 19:00 - 22:00 МСК
+                    .form-block.card-block__item
+                        .form-block__item
+                            label.form-block__label(for="comment") Комментарий
+                            textarea.form-block__field(name="comment", cols="30", rows="12")
+                    .form-block.card-block__item.form-block--text
+                        .text-block.fs-18
+                            p Для заказа видеосъемки оставьте свои контактные данные и я перезвоню Вам в удобное для Вас время для обсуждения деталей.
+                            p 
+                                a.link(href="mailto:rinamayone@gmail.com") Rinamayone@gmail.com
+                            .block-policy
+                                input.block-policy__input(id="userAgreement" type="checkbox" name="form-policy" value="Согласие на политику конфиденциальности" checked onclick="this.checked=true")
+                                .my-checkbox
+                                label.block-policy__label(for="userAgreement") Я даю согласие на обработку моих персональных данных. 
+                                    a.block-policy__link(href="policy" target="_blank") Политика конфиденциальности
+                        input.btn.btn--black(type="submit" value="Заказать")
+    footer.footer.section--black
+        .container
+            .footer__block
+                .footer__block_item
+                    a.logo(href="")
+                        svg.logo__svg(height='100%')
+                            use(xlink:href=`images/icons/sprite.svg#MAYONEPRO`)
+                    .text-confidenc © 2019  MAYONEPRO
+                .footer__block_item
+                    a.link(href="mailto:rinamayone@gmail.com") Rinamayone@gmail.com
+                    .social
+                        -
+                            var socials = [
+                                ['inst','https://instagram.com/mayone.pro?igshid=ifxlt1rdey2h'],
+                                ['telegram','https://tmgo.me/rinamayone']
+                                ]
+                        ul.social__list
+                            each social in socials
+                                li.social__item
+                                    a(class=`social__link social__link_${social[0]}` href=`${social[1]}` target="_blank")
+                                        svg.social__link_svg(width='100%' height='100%')
+                                            use(xlink:href=`images/icons/sprite.svg#${social[0]}`)

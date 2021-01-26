@@ -1,0 +1,223 @@
+.card-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  &--one-desc {
+    justify-content: center;
+    .card-block__item {
+      max-width: rem(470px);
+    }
+    .card-block__item:nth-last-child(1) {
+      margin-left: rem(130px);
+      padding-top: rem(20px);
+      display: flex;
+      flex-direction: column;
+    }
+    .card__content_bottom {
+      text-align: left;
+      padding-left: rem(25px);
+    }
+    .card__order_btn {
+      width:50%;
+      .btn {
+        width: 100%;
+        border: none;
+        border-left: 1px solid $black;
+      }
+    }
+  }
+  &--two-card {
+    justify-content: center;
+    .card-block__item {
+      max-width: rem(470px);
+      margin: 0 15px 30px;
+    }
+    .card__title {
+      min-height: 84px;
+    }
+    .card__order_btn {
+      width:50%;
+      .btn {
+        width: 100%;
+        border: none;
+        border-left: 1px solid $black;
+      }
+    }
+  }
+  &--three-card {
+    justify-content: center;
+    .card-block__item {
+      max-width: rem(370px);
+      margin: 0 15px 30px;
+    }
+    .card__title {
+      min-height: 84px;
+    }
+  }
+  &--white {
+    .card {
+      background: url(../images/bg/motion-card.png);
+      background-size: cover;
+    }
+    .card__content {
+      background-color: rgba(#EDEBEA, .7);
+    }
+    .card-list__item {
+      &:before {
+        background-image: url(../images/icons/check.svg);
+      }
+    }
+    .card__order_price {
+      background-color: rgba($white, .7);
+    }
+  }
+  &--black {
+    color: $white;
+    .card {
+      background: url(../images/bg/buisness-card.png);
+      background-size: cover;
+    }
+    .card__content {
+      background-color: rgba(#232323, .7);
+    }
+    .card-list__item {
+      &:before {
+        background-image: url(../images/icons/check-white.svg);
+      }
+    }
+    .card__order_price {
+      background-color: rgba($black, .7);
+    }
+    .card__order {
+      border: 1px solid $white;
+      .btn {
+        border-left: 1px solid $white;
+      }
+    }
+  }
+}
+.card-block__item {
+  display: flex;
+}
+.card {
+  padding: rem(22px) rem(34px);
+  display: flex;
+  flex-direction: column;
+  &--icon-text {
+    text-align: center;
+    padding: rem(22px) rem(15px);
+  }
+}
+.card-icon {
+  max-width: 170px;
+  max-height: 170px;
+  margin: 0 auto;
+  margin-bottom: rem(30px);
+}
+.card-description {
+  font-family: 'FuturaPT', sans-serif;
+  font-style: normal;
+  font-weight: 100  ;
+  @include font-size(18px);
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.card__title {
+  @include font-size(30px);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: rem(22px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__content {
+  flex: 1;    
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #855024 , #F9E0B0);
+  border-image-slice: 1;
+  background-color: rgba(#EDEBEA, .7);
+  margin-bottom: rem(34px);
+  box-shadow: -1px 11px 18px -10px rgba(0,0,0,0.75);
+}
+.card__content_top {
+  padding: rem(20px) rem(10px) rem(20px) rem(25px);
+}
+.card-list {
+  &.card-list--check {
+    .card-list__item {
+      padding-left: rem(40px);
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+.card-list__item {
+  margin-bottom: rem(19px);
+  @include font-size(15px);
+  font-weight: 700;
+  position: relative;
+}
+.card__content_bottom {
+  padding: rem(15px);
+  @include font-size(16px);
+  text-align: center;
+  font-weight: 700;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  border-top: 1px solid #855024;
+}
+.card-sublist {
+  list-style-type: decimal;
+  padding-inline-start: 20px;
+}
+.card-sublist__item {
+  padding-left: 5px;
+  line-height: 1.5;
+}
+.card__order {
+  display: flex;
+  margin: 0 rem(20px);
+  border: 1px solid $black;
+}
+.card__order_price {
+  flex: 1 1 auto;
+  text-align: center;
+  @include font-size(25px);
+  line-height: 38px;
+  font-weight: 700;
+  padding: 0 10px;
+}
+.card__order_btn {
+  display: flex;
+}
+.card-descript {
+  padding-left: rem(130px);
+}
+.card-ref {
+  text-align: right;
+}
+.card-ref__link {
+  color: $black;
+  text-decoration: underline;
+  transition: all .3s ease-out;
+  &:hover {
+    color: $darkGold;
+    transition: all .3s ease-out;
+  }
+}

@@ -1,0 +1,29 @@
+script#formModal(type="formModal")
+  .overlay-modal
+  .modal-form
+    .popup-modal
+      .close.close-modal
+      h2.section-title Заказать съемку
+      form.form.card-block.card-block--three-card#modal-form(action="" method="post" name="contact_form")
+        .form-block.card-block__item
+            .form-block__item
+                label.form-block__label(for="name") Ваше имя
+                input.form-block__field(type="text" name="name")
+            .form-block__item
+                label.form-block__label(for="number") Номер телефона
+                input.form-block__field(type="text" name="number")
+            .form-block__item
+                label.form-block__label(for="time-select") во сколько вам позвонить?
+                select.form-block__field.form-block__select(name="time-select")
+                    option.form-block__option(value="0" selected="selected") В ЛЮБОЕ ВРЕМЯ
+                    option.form-block__option(value="1") 09:00 - 12:00 МСК
+                    option.form-block__option(value="2") 12:00 - 15:00 МСК
+                    option.form-block__option(value="3") 15:00 - 16:00 МСК
+                    option.form-block__option(value="4") 16:00 - 19:00 МСК
+                    option.form-block__option(value="5") 19:00 - 22:00 МСК
+        .form-block.card-block__item
+            .form-block__item
+                label.form-block__label(for="comment") Комментарий
+                textarea.form-block__field(name="comment", cols="30")
+        .form-block.card-block__item.form-block--text
+            input.btn.btn--black(type="submit" value="Заказать")

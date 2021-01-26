@@ -1,0 +1,68 @@
+.first {
+  background-color: #000000;
+  &__block {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 50px 0 100px;
+  }
+}
+.first__content {
+  flex: 1;
+
+  &_title {
+    font-family: 'FuturaPT', sans-serif;
+    font-style: normal;
+    font-weight: 450;
+    @include font-size(20px);
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: rem(30px);
+  }
+  &_subtitle {
+    font-family: 'FuturaPT', sans-serif;
+    font-style: normal;
+    font-weight: 450;
+    @include font-size(36px);
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: inline-block;
+  }
+  &_img {
+    max-height: 508px;
+  }
+  &_text {
+    font-family: 'FuturaPT', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    @include font-size(18px);
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 80%;
+    &--short {
+      width: 70%;
+    }
+  }
+  &-description {
+    margin-bottom: 45px;
+  }
+  &_btns {
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+.first__pictures {
+  flex: 1;
+  text-align: right;
+
+  &_img {
+    max-width: 508px;
+    width: 100%;
+  }
+}

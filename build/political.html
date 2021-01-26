@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mayone</title>
+    <link rel="shortcut icon" href="images/content/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <section class="political">
+      <div class="container">
+        <div class="main__logo"><img></div>
+        <h1 class="main-title">Политика конфидециальности</h1>
+        <div class="political__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        </div>
+      </div>
+    </section>
+    <div class="burger-block">
+      <div class="burger"><span class="burger__line burger__line--1"></span><span class="burger__line burger__line--2"></span><span class="burger__line burger__line--3"></span></div>
+    </div>
+    <div class="burger-menu">
+      <nav class="burger-nav">
+        <ul class="burger-nav__list">
+          <li class="burger-nav__item"><a class="burger-nav__link nav__link--active" href="#hero">Главная</a></li>
+          <li class="burger-nav__item"><a class="burger-nav__link" href="#about">Обо мне</a></li>
+          <li class="burger-nav__item"><a class="burger-nav__link" href="#portfolio">Портфолио</a></li>
+          <li class="burger-nav__item"><a class="burger-nav__link" href="#service">Услуги</a></li>
+          <li class="burger-nav__item"><a class="burger-nav__link" href="#feedback">Отзывы</a></li>
+          <li class="burger-nav__item"><a class="burger-nav__link" href="#application">Заказать съемку</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="overlay"></div>
+    <div class="popup">
+      <div class="close"></div>
+      <iframe class="popup__iframe" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <script id="formModal" type="formModal">
+      <div class="overlay-modal"></div>
+      <div class="modal-form">
+        <div class="popup-modal">
+          <div class="close close-modal"></div>
+          <h2 class="section-title">Заказать съемку</h2>
+          <form class="form card-block card-block--three-card" id="modal-form" action="" method="post" name="contact_form">
+            <div class="form-block card-block__item">
+              <div class="form-block__item">
+                <label class="form-block__label" for="name">Ваше имя</label>
+                <input class="form-block__field" type="text" name="name">
+              </div>
+              <div class="form-block__item">
+                <label class="form-block__label" for="number">Номер телефона</label>
+                <input class="form-block__field" type="text" name="number">
+              </div>
+              <div class="form-block__item">
+                <label class="form-block__label" for="time-select">во сколько вам позвонить?</label>
+                <select class="form-block__field form-block__select" name="time-select">
+                  <option class="form-block__option" value="0" selected="selected">В ЛЮБОЕ ВРЕМЯ</option>
+                  <option class="form-block__option" value="1">09:00 - 12:00 МСК</option>
+                  <option class="form-block__option" value="2">12:00 - 15:00 МСК</option>
+                  <option class="form-block__option" value="3">15:00 - 16:00 МСК</option>
+                  <option class="form-block__option" value="4">16:00 - 19:00 МСК</option>
+                  <option class="form-block__option" value="5">19:00 - 22:00 МСК</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-block card-block__item">
+              <div class="form-block__item">
+                <label class="form-block__label" for="comment">Комментарий</label>
+                <textarea class="form-block__field" name="comment" cols="30"></textarea>
+              </div>
+            </div>
+            <div class="form-block card-block__item form-block--text">
+              <input class="btn btn--black" type="submit" value="Заказать">
+            </div>
+          </form>
+        </div>
+      </div>
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

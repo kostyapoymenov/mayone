@@ -1,0 +1,16 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 200px;
+  left: calc(50% - 280px);
+  background: $black;
+  z-index: 300;
+  &--active {
+    display: block;
+  }
+}
+.popup__iframe {
+  width: 650px; 
+  height: 366px;
+  border: none;
+}

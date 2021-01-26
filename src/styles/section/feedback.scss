@@ -1,0 +1,37 @@
+.feedback__item {
+  width: 70%;
+  margin: 0 auto;
+}
+.feedback-avatar {
+  margin: 0 auto rem(35px);
+  width: rem(160px);
+  height: rem(160px);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $lightGold;
+  background-size: cover;
+}
+.feedback-avatar_img {
+  height: 100%;
+  width: auto;
+}
+.feedback-text {
+  margin-bottom: 20px;
+  .text-block {
+    text-transform: none;
+    text-align: center;
+  }
+}
+.feedback-name {
+  text-align: center;
+  color: $white;
+  @include font-size(18px);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.feedback-link {
+  text-align: center;
+  @include font-size(12px);
+  font-weight: 700;
+  text-decoration: underline;
+}
