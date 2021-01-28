@@ -1,0 +1,101 @@
+.accordion {
+  position: relative;
+}
+.accordion:before {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 25px;
+  width: 2px;
+  height: 85%;
+  background-color: $middleGold;
+}
+.accordion-tab:not(.open) .accordion-tab__content {
+  height: 0!important;
+}
+.accordion .accordion-tab__content {
+  overflow: hidden;
+  transition: height .5s ease;
+}
+.accordion-tab__header {
+  font-family: 'FuturaPT', sans-serif;
+  font-style: normal;
+  font-weight: 450;
+  @include font-size(24px);
+  line-height: rem(31px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 15px 0;
+  cursor: pointer;
+  position: relative;
+}
+.accordion-tab {
+  padding-left: rem(70px);
+}
+.accordion-tab .line-text {
+  margin: 0;
+}
+.accordion-tab__text {
+  padding-bottom: 20px;
+  position: relative;
+}
+.accordion-tab__text p {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 5px;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 12px;
+    height: 17px;
+    background-image: url('../images/icons/triangle-gold-left.svg');
+    background-size: cover;
+  }
+}
+.accordion-tab__triangle {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.accordion-tab__num {
+  background-color: transparent;
+  position: absolute;
+  left: -75px;
+  top: -15px;
+  height: 60px;
+  width: 60px;
+  background-color: #000;
+  
+  .accordion-tab__number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-22px) translateX(-22px);
+    border: 2px;
+    height: 44px;
+    width: 44px;
+    text-align: center;
+    line-height: 1.7;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #B99063;
+    background-color: #000;
+    background: linear-gradient(to right, $darkGold, $darkGold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.accordion-tab__num-back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-22px) translateX(-22px);
+  border: 2px;
+  height: 44px;
+  width: 44px;
+  background-color: #000;
+}

@@ -6,11 +6,14 @@ $(document).ready(function(){
   });
 
   burger(); // работа бунгера на мобильниках
-  numberUp(); // увеличение чиселпри скролле
+  if($('.stat-section').length > 0){
+    console.log('aaaa');
+    numberUp(); // увеличение чисел при скролле
+  }
   popupShow(); // модальные окна с видео портфолио
   menuScroll(); // активный пункт главного меню при скроле
   jQuery(function(){
-    jQuery(window).scroll(scroll_active);
+    // jQuery(window).scroll(scroll_active);
   }); // активный пункт бургер меню при скроле
   modalForm();
 
@@ -199,6 +202,109 @@ $(document).ready(function(){
       
     });
   }
+
+  //Accordion
+  function Accordion(){
+    "use strict";
+
+    var settings = {};
+
+    function getParameterByName(name, url) {
+      if (!url) {
+        url = window.location.href;
+      }
+    
+      name = name.replace(/[[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    function customScroll(el) {
+      var offset;
+      if($(window).width() > 1200) {
+        offset = el.offset().top - 70
+      } else {
+        offset = el.offset().top
+      };
+      $([document.documentElement, document.body]).animate({
+        scrollTop: offset
+      }, 500);
+    };
+
+    function resize() {
+      $('.accordion-tab__content').each(function(i, item) {
+        $(item).css({
+          'height':
+          $(item)
+            .find('.accordion-tab__text')
+            .outerHeight()
+        });
+      });
+    };
+
+    function open(e) {
+      resize();
+      var classActive = 'open';
+      var classItemActive = 'open';
+      var header = $(e).find('.accordion-tab__header');
+
+      if (!header.length) return;
+    
+      var item = header.parents('.accordion-tab');
+    
+      var list = item.parents('.accordion');
+    
+      if (item.hasClass(classItemActive)) {
+        item.removeClass(classItemActive);
+        list.removeClass(classActive);
+      } else {
+        list.addClass(classActive);
+        list.find('.accordion-tab').removeClass(classItemActive);
+        item.addClass(classItemActive);
+      }
+
+      if (settings.scrollToElem && 
+          $(e).hasClass( "open" )
+        ) {
+        setTimeout(function(){customScroll(e);}, 400)
+      }
+
+    }
+
+    function init(set) {
+      // window.accordionInit = true;
+      // var settings = settings || {};
+
+      settings = set;
+
+      $(window).resize(resize);
+
+      $('.accordion-tab__header').on('click', function() {
+        open($(this).closest('.accordion-tab'));
+      });
+
+      var preSelected = getParameterByName('tab');
+      if (preSelected) {
+      open($("#"+preSelected))
+      }
+    }
+    return Object.freeze({
+      init: init,
+      open: open,
+      resize: resize
+    });
+  }
+
+  window.accordion = Accordion();
+  accordion.init(
+    {
+      scrollToElem: $('.accordion').attr('data-scroll')
+    }
+  );
   
   $('form').submit(function(e) {
     e.preventDefault();
