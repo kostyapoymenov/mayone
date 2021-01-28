@@ -35,3 +35,30 @@
   font-weight: 700;
   text-decoration: underline;
 }
+.feedback--mod-inline {
+  .feedback__item {
+    display: flex;
+    align-items: center;
+    
+    .feedback-avatar {
+      display: inline-block;    
+      margin-bottom: 5px;
+    }
+    .feedback-text {
+      display: inline-block;
+      width: 79%;
+      padding-left: rem(40px);
+      .text-block {
+        text-align: left ;  
+      }
+    }
+    .feedback-user {
+      width: 100%;
+      max-width: 160px;
+      text-align: center;
+    }
+    .feedback-name {
+      color: #000000;
+    }
+  }
+}

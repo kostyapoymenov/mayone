@@ -16,3 +16,37 @@
   min-width: rem(300px);
   padding-left: rem(35px);
 }
+
+// ABOUT NEW
+
+.about--new {
+  .text-list__item {
+    @include font-size(16px);
+    padding-left: 0;
+    margin-left: 0;
+    &::before {
+      display: none;
+    }
+  }
+  .text-block {
+    margin-bottom: 20px;
+    &.text-small {
+      @include font-size(16px);
+    }
+  }
+  .text-block p {
+    margin-bottom: 10px;
+  }
+  .about__block-btn {
+    position: relative;
+    padding-left: 60px;
+    .double-triangle-left_svg {
+      top: 50%;
+      transform: translateY(-17px);
+      animation: triangle-animte-left 1.5s ease-out infinite;
+    }
+  }
+  .about__right_img {
+    max-width: 420px;
+  }
+}

@@ -160,7 +160,12 @@
       width: 25%;
     }
   }
-  
+  .card-icon {
+    max-width: 150px;
+  }
+  video.video-feedback {
+    width: 50%;
+  }
 }
 @include tablets {
   .nav {
@@ -207,6 +212,20 @@
   .popup__iframe {
     width: 600px; 
     height: 338px;
+  }
+  .card--icon-text {
+    padding: 0;
+  }
+  .info-block {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-block__left {
+    max-width: 380px;
+    margin-bottom: 30px;
+  }
+  video.video-feedback {
+    width: 70%;
   }
 }
 @include phones {
@@ -344,6 +363,7 @@
   }
   .card {
     padding: 20px 23px;
+    max-width: rem(500px);
   }
   .card__order {
     margin: 0;
@@ -364,6 +384,7 @@
     .card-block__item{
       max-width: 100%;
       padding: 0;
+      justify-content: center;
     }
     .card__title {
       min-height: auto;
@@ -373,7 +394,21 @@
     margin: 0;
     .card-block__item {
       max-width: 100%;
-      margin-right: 0;
+      justify-content: center;
+    }
+    &--responsive {
+      .card-block__item {
+        flex: 1 1 300px;
+      }
+    }
+  }
+  .card-icon {
+    max-width: 110px;
+  }
+  .card__block-btn {
+    text-align: center;
+    a {
+      width: 100%;
     }
   }
   .section-subtitle {
@@ -446,15 +481,50 @@
       flex: auto;
     }
   }
-
-  // COURSES PAGE
   .first__block {
-    padding-top: 0px;
     flex-direction: column-reverse;
+    padding: 0 0 40px;
   }
   .first__pictures {
     width: 60%;
   }
+  .first__content_btns {
+    text-align: center;
+    .btn{
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+  .info-block__left {
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .info-block__right {
+    padding: 0 ;
+  }
+  .about--new .about__block-btn {
+    padding-left: 0;
+    text-align: center;
+    a {
+      width: 100%;
+    }
+  }
+  .feedback--mod-inline {
+    .feedback__item {
+      flex-direction: column; 
+      .feedback-text {
+        padding-left: 0;
+        width: 100%;
+        .text-block {
+          text-align: center;
+        }
+      }
+    }
+  }
+  video.video-feedback {
+    width: 90%;
+  }
+
 }
 @include phones-xs {
   .popup {
@@ -464,5 +534,15 @@
   .popup__iframe {
     width: 250px; 
     height: 141px;
+  }
+  .double-triangle-left {
+    padding-left: 0;
+    position: relative;
+  }
+  .text-block__triangle {
+    padding-left: 0;
+  }
+  .double-triangle-left_svg {
+    display: none;
   }
 }
