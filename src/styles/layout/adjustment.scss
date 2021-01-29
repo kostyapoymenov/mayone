@@ -26,6 +26,10 @@ section {
       color: $white;
     }
   }
+  &--black-bg {
+    background-image: url(../images/bg/section-black-bg.png);
+    background-size: cover;
+  }
   &--border-gold {
     &:after {
       content: "";
@@ -33,6 +37,7 @@ section {
       top: 0;
       width: 100%;
       height: 2px;
+      background: $middleGold;
       background: linear-gradient(to right, #855024, #B99063);
     }
     &:before {
@@ -41,6 +46,7 @@ section {
       bottom: 0;
       width: 100%;
       height: 2px;
+      background: $middleGold;
       background: linear-gradient(to right, #855024, #B99063);
     }
   }
@@ -54,6 +60,8 @@ section {
   @include font-size(18px);
   transition: all 0.3s ease-out;
   outline:none;
+  min-width: 200px;
+  text-align: center;
   cursor: pointer;
   &--black {
     color: $white;
@@ -96,11 +104,13 @@ section {
   }
   &--gold-gradient {
     color: $white;
+    background: $middleGold;
     background: linear-gradient(to right, $darkGold, $middleGold);
     border: 1px solid $white;
 
     &:hover{
       color: $black;
+      background: $middleGold;
       background: linear-gradient(to right, $middleGold, $darkGold);
       transition: all 0.3s ease-out;
     }
@@ -112,6 +122,16 @@ section {
       color:$black;
       background-color: $white;
       transition: all 0.3s ease-out;
+    }
+    &.disabled {
+      pointer-events: none;
+      color: #CBCBCB;
+      border-color: #CBCBCB;
+      &:hover {
+        background-color: transparent;
+        color: #CBCBCB;
+        border-color: #CBCBCB;
+      }
     }
   }
 }
@@ -153,13 +173,17 @@ section {
   }
 }
 .section-title {
+  font-family: 'FuturaPT', sans-serif;
   font-weight: 700;
   @include font-size(36px);
   color: $black;
-  margin-bottom: rem(40px);
   text-align: center;
   position: relative;
   display: block;
+  margin-bottom: rem(40px);
+  &--not-triangle {
+    margin-bottom: rem(20px);
+  }
   &--white{
     color: $white
   }
@@ -175,6 +199,7 @@ section {
       left:0;
       width: 120%;
       height: 3px;
+      background: $middleGold;
       background: linear-gradient(to right, $darkGold, $lightGold);
     }
   }
@@ -187,6 +212,14 @@ section {
     border: 9px solid transparent;
     border-left: 14px solid $black;  
     }
+  }
+  &-bg {
+    width: 100%;
+    padding: rem(10px);
+    font-weight: bold;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
   }
 }
 .section-subtitle {
@@ -217,6 +250,7 @@ section {
       width: 50%;
       max-width: rem(270px);
       height: 3px;
+      background: $middleGold;
       background: linear-gradient(to right, $darkGold, $lightGold);
     }
   }
@@ -335,13 +369,11 @@ section {
     }
   }
 }
-.text-sublist_item {
-  
-}
 .line-text {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, $darkGold, $lightGold);
+  height: 1px;
+  background: $middleGold;
+  background: linear-gradient(to right, $darkGold, $middleGold);
   margin-bottom: rem(20px);
   &--short {
     width: 25%;
@@ -365,6 +397,7 @@ section {
     top: calc(50% - 17px);
     left:0;
     height: 2px;
+    background: $middleGold;
     background: linear-gradient(to right, $darkGold, $lightGold);
     width: 40%;
   }
@@ -374,6 +407,7 @@ section {
     top:  calc(50% - 17px);
     right: 0;
     height: 2px;
+    background: $middleGold;
     background: linear-gradient(to right, $darkGold, $lightGold);
     width: 40%;
   }
@@ -393,6 +427,7 @@ section {
     top:  calc(50% - 1px);
     left: 40px;
     height: 2px;
+    background: $middleGold;
     background: linear-gradient(to right, $darkGold, $lightGold);
     width: 93%;
   }
@@ -448,6 +483,7 @@ section {
     height: 3px;
     width: 35px;
     transform: rotate(45deg);
+    background: $middleGold;
     background: linear-gradient(to right, $darkGold, $lightGold);
   }
   &:after {
@@ -458,6 +494,7 @@ section {
     height: 3px;
     width: 35px;
     transform: rotate(-45deg);
+    background: $middleGold;
     background: linear-gradient(to right, $darkGold, $lightGold);
   }
 }
@@ -530,6 +567,7 @@ video.video-feedback {
   font-style: normal;
   font-weight: 450;
   color: $darkGold;
+  background: $middleGold;
   background: linear-gradient(to right, $darkGold, $middleGold);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
@@ -539,6 +577,7 @@ video.video-feedback {
   &:hover {
     transition: all .3s ease;
     color: #B99063;
+    background: $middleGold;
     background: linear-gradient(to right, $darkGold, $darkGold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -34,12 +34,12 @@ $phones-xs: 568px;
 //courses
 @import "section/courses/first.scss";
 @import "section/courses/profession.scss";
+@import "section/courses/choice.scss";
 
 @import "section/footer.scss";
 @import "section/burger.scss";
 @import "section/popup.scss";
 @import "section/modal.scss";
-
 
 // media-quries
 @import "section/media.scss";

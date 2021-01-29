@@ -111,6 +111,7 @@
     right: 100%;
     height: 2px;
     width: 20px;
+    background: $middleGold;
     background: linear-gradient(to right, $darkGold, $lightGold);
   }
   &:after {
@@ -120,6 +121,7 @@
     left: 100%;
     height: 2px;
     width: 20px;
+    background: $middleGold;
     background: linear-gradient(to right, $lightGold, $darkGold);
   }
 }

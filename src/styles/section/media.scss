@@ -166,6 +166,11 @@
   video.video-feedback {
     width: 50%;
   }
+  .first__content_btns {
+    .btn {
+      margin-bottom: 10px;
+    }
+  }
 }
 @include tablets {
   .nav {
@@ -488,13 +493,6 @@
   .first__pictures {
     width: 60%;
   }
-  .first__content_btns {
-    text-align: center;
-    .btn{
-      margin-bottom: 10px;
-      width: 100%;
-    }
-  }
   .info-block__left {
     max-width: 300px;
     margin-bottom: 30px;
@@ -524,7 +522,22 @@
   video.video-feedback {
     width: 90%;
   }
-
+  .first__content_btns {
+    text-align: center;
+    .btn{
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+  .choice {
+    flex-direction: column;
+    &__item {
+      margin-bottom: 40px;
+    }
+  }
+  .first__content_text {
+    width: 100%;
+  }
 }
 @include phones-xs {
   .popup {
