@@ -107,7 +107,7 @@ block content
             .info-block__left_back-img
               img.info-block__left_img(src="images/content/how_it_will_be.gif")
           .info-block__right
-            h2.section-title.section-title--left "ЧТО Я ПОЛУЧУ?"
+            h2.section-title.section-title--left.section-title--not-triangle "ЧТО Я ПОЛУЧУ?"
             .line-text
             .text-block
               .text-block__triangle
@@ -165,6 +165,8 @@ block content
               .accordion-tab__num
                 span.accordion-tab__num-back
                 span.accordion-tab__number 1
+              .accordion-tab__checker
+                span.accordion-tab__checker-plus 
               | ВВЕДЕНИЕ В ВИДЕОМЕЙКИНГ
             .accordion-tab__content
               .accordion-tab__text
@@ -181,6 +183,8 @@ block content
               .accordion-tab__num
                 span.accordion-tab__num-back
                 span.accordion-tab__number 2
+              .accordion-tab__checker
+                span.accordion-tab__checker-plus 
               | ВВЕДЕНИЕ В ВИДЕОМЕЙКИНГ
             .accordion-tab__content
               .accordion-tab__text
@@ -196,6 +200,8 @@ block content
             .accordion-tab__header
               .accordion-tab__num
                 span.accordion-tab__number 3
+              .accordion-tab__checker
+                span.accordion-tab__checker-plus 
               | ВВЕДЕНИЕ В ВИДЕОМЕЙКИНГ
             .accordion-tab__content
               .accordion-tab__text
@@ -214,7 +220,7 @@ block content
             .info-block__left_back-img
               img.info-block__left_img(src="images/content/how_it_will_be.gif")
           .info-block__right
-            h2.section-title.section-title--left “КАК ВСЕ БУДЕТ?”
+            h2.section-title.section-title--left.section-title--not-triangle “КАК ВСЕ БУДЕТ?”
             .line-text
             .text-block
               .text-block__triangle
@@ -370,6 +376,81 @@ block content
                     li.card-list__item 1 пункт
               .card__block-btn
                 a.btn.btn--transparent(href="")  Купить
-
-
-
+    section.section
+      .container 
+        h2.section-title программа обучения
+          .double-triangle
+            svg.double-triangle_svg(width="42" height="45" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M27 56L3.61731 21.5L50.3827 21.5L27 56Z", fill="black")
+              path(d="M48.4969 12.5L27 44.2176L5.50311 12.5L48.4969 12.5Z", stroke="url(#paint0_linear)", stroke-width="2")
+              defs
+                linearGradient(id="paint0_linear", x1="27", y1="46", x2="27", y2="0", gradientUnits="userSpaceOnUse")
+                  stop(stop-color="#F9E0B0")
+                  stop(offset="1", stop-color="#855024")
+        .accordion.accordion--not-number-line
+          .accordion-tab.accordion-tab-not-triangle
+            .line-text
+            .accordion-tab__header 
+              .accordion-tab__num
+                span.accordion-tab__num-back
+                span.accordion-tab__number ?
+              .accordion-tab__checker
+                span.accordion-tab__checker-plus 
+              | Подойдет ли мне курс, если я никогда не работала в компьютерных программах?
+            .accordion-tab__content
+              .accordion-tab__text
+                p Да! Программа курса рассчитана на новичков. Не важно, кем вы сейчас работаете и был ли у вас дизайнерский опыт. На курсе есть целый раздел о том, как развить свою креативность и насмотренность.
+          .accordion-tab.accordion-tab-not-triangle
+            .line-text
+            .accordion-tab__header 
+              .accordion-tab__num
+                span.accordion-tab__num-back
+                span.accordion-tab__number ?
+              .accordion-tab__checker
+                span.accordion-tab__checker-plus 
+              | Обязательно ли покупать лицензионный версии программ?
+            .accordion-tab__content
+              .accordion-tab__text
+                p Да! Программа курса рассчитана на новичков. Не важно, кем вы сейчас работаете и был ли у вас дизайнерский опыт. На курсе есть целый раздел о том, как развить свою креативность и насмотренность.
+          .accordion-tab.accordion-tab-not-triangle 
+            .line-text
+            .accordion-tab__header
+              .accordion-tab__num
+                span.accordion-tab__number ?
+              .accordion-tab__checker
+                span.accordion-tab__checker-plus 
+              | Что я буду уметь после прохождения курса?
+            .accordion-tab__content
+              .accordion-tab__text
+                p Да! Программа курса рассчитана на новичков. Не важно, кем вы сейчас работаете и был ли у вас дизайнерский опыт. На курсе есть целый раздел о том, как развить свою креативность и насмотренность.
+          .accordion-tab.accordion-tab-not-triangle 
+            .line-text
+            .accordion-tab__header
+              .accordion-tab__num
+                span.accordion-tab__number ?
+              .accordion-tab__checker
+                span.accordion-tab__checker-plus 
+              | “потянет” ли мой компьютер?
+            .accordion-tab__content
+              .accordion-tab__text
+                p Да! Программа курса рассчитана на новичков. Не важно, кем вы сейчас работаете и был ли у вас дизайнерский опыт. На курсе есть целый раздел о том, как развить свою креативность и насмотренность.
+            .line-text
+    section.section.section--black-bg
+      h2.section-title-bg выбор за вами!
+      .container 
+        .choice-wrap 
+          .choice
+            .choice__item.choice__item--small
+              .choice__item-icon
+                img(src="images/content/choice-one.png", alt="Оставить все как есть")
+              .choice__item-description Оставить все
+                br
+                | как есть
+              .choice__item-btn
+                a(href="#").btn.btn--transparent.disabled ничего&nbsp;не&nbsp;делать&nbsp;:&nbsp;(
+            .choice__item.choice__item--big
+              .choice__item-icon
+                img(src="images/content/choice-two.png", alt="стать востребованным специалистом")
+              .choice__item-description стать востребованным специалистом и начать зарабатывать на творчестве
+              .choice__item-btn
+                a(href="#").btn.btn--gold-gradient Выбрать

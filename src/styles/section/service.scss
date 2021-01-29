@@ -20,6 +20,7 @@
     .card__order_btn {
       width:50%;
       .btn {
+        min-width: auto;
         width: 100%;
         border: none;
         border-left: 1px solid $black;
@@ -40,6 +41,7 @@
     .card__order_btn {
       width:50%;
       .btn {
+        min-width: auto;
         width: 100%;
         border: none;
         border-left: 1px solid $black;
@@ -132,7 +134,7 @@
   font-style: normal;
   font-weight: 100  ;
   @include font-size(18px);
-  line-height: 23px;
+  line-height: rem(23px);
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -152,6 +154,7 @@
   display: flex;
   flex-direction: column;
   border: 2px solid transparent;
+  background: $middleGold;
   border-image: linear-gradient(to right, #855024 , #F9E0B0);
   border-image-slice: 1;
   background-color: rgba(#EDEBEA, .7);
@@ -215,7 +218,7 @@
   flex: 1 1 auto;
   text-align: center;
   @include font-size(25px);
-  line-height: 38px;
+  line-height: rem(38px);
   font-weight: 700;
   padding: 0 10px;
 }
@@ -223,6 +226,7 @@
   display: flex;
   .btn {
     padding:rem(9px) rem(25px);
+    min-width: auto;
   }
 }
 .card-descript {
