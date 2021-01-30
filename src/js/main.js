@@ -3,7 +3,7 @@ $(document).ready(function(){
   console.log(window.location.pathname.slice(1));
 
   // ГЛАВНАЯ СТРАНИЦА
-  if(window.location.pathname.slice(1) == '') {
+  if(window.location.pathname.match(/index.html/) == '') {
     console.log('INDEX');
     var menuArr = ['hero', 'about', 'portfolio', 'service', 'feedback', 'application'];
 
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
   
   // СТРАНИЦА КУРСЫ
-  if(window.location.pathname.slice(1) == 'courses.html') {
+  if(window.location.pathname.match(/courses.html/) == 'courses.html') {
     console.log('COURSES');
     var menuArr = ['first', 'about', 'programs', 'cost', 'faq', 'application'];
 
