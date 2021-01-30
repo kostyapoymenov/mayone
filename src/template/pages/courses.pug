@@ -21,7 +21,7 @@ block content
                         li.nav__item
                             a.nav__link(href="#cost" onclick="return anchorScroller(this)") Стоимость
                         li.nav__item
-                            a.nav__link(href="#feedback" onclick="return anchorScroller(this)") FAQ
+                            a.nav__link(href="#faq" onclick="return anchorScroller(this)") FAQ
                         li.nav__item
                             a.nav__link(href="#application" onclick="return anchorScroller(this)") Обучение
         .header__social
@@ -44,9 +44,11 @@ block content
             .first__content-description
               h1.first__content_title авторский курс от rina mayone
                 span.first__content_subtitle Motion - design с нуля
-              .line-quote-text "
-              p.first__content_text “Когда вы покупаете обучение, вы получаете не просто объяснение команд, которые нужно использовать.
-              p.first__content_text.first__content_text--short.text-bold Вы покупаете навык и возможность зарабатывать на том, что нравится”
+              .first__content-desc
+                .line-quote-text "
+                .first__content-animation-block
+                  p.first__content_text “Когда вы покупаете обучение, вы получаете не просто объяснение команд, которые нужно использовать.
+                  p.first__content_text.first__content_text--short.text-bold Вы покупаете навык и возможность зарабатывать на том, что нравится”
             .first__content_btns
               .btn.btn--gold-gradient ЗАПИСАТЬСЯ
               .btn.btn--black-white программа курса
@@ -79,6 +81,9 @@ block content
             .card-block__item
               .card--icon-text
                 .card-icon
+                  .card-icon-cilce.card-icon-cilce-one
+                  .card-icon-cilce.card-icon-cilce-two
+                  .card-icon-cilce.card-icon-cilce-three
                   img(src="images/icons/profession-1.png", alt="")
                 .card-description
                   p.text-bold Видео - это 80%  контента в интернете.
@@ -86,6 +91,9 @@ block content
             .card-block__item
               .card--icon-text
                 .card-icon
+                  .card-icon-cilce.card-icon-cilce-one
+                  .card-icon-cilce.card-icon-cilce-two
+                  .card-icon-cilce.card-icon-cilce-three
                   img(src="images/icons/profession-2.png", alt="")
                 .card-description
                   p Пока остальные монтируют по шаблонам на телефоне, вы учитесь создавать 
@@ -95,12 +103,15 @@ block content
             .card-block__item
               .card--icon-text
                 .card-icon
+                  .card-icon-cilce.card-icon-cilce-one
+                  .card-icon-cilce.card-icon-cilce-two
+                  .card-icon-cilce.card-icon-cilce-three
                   img(src="images/icons/profession-3.png", alt="")
                 .card-description
                   p КАЧЕСТВЕННЫЙ ВИДЕОКОНТЕНТ УВЕЛИЧИВАЕТ 
                     span.text-bold  ВОВЛЕЧЕННОСТЬ, ПРОДАЖИ И ДОВЕРИЕ. 
                     | это ТРИ САМЫХ ВАЖНЫХ ПОКАЗАТЕЛЯ ДЛЯ ЛЮБых ПРЕДПРИНИМАТЕЛей, и они готовы за них платить
-    section.section
+    section.section#about
       .container
         .info-block
           .info-block__left 
@@ -147,7 +158,7 @@ block content
                   p экономию времени с бОльшим результатом. когда у вас есть наставник, появляется не только дополнительная мотивация, но и отвественность. вся необходимая информация в одином курсе.
               .text-block__triangle
                 a.link.gold-text(href="") проходи и начинай зарабатывать!
-    section.section.section--black
+    section.section.section--black#programs
       .container 
         h2.section-title.section-title--white программа обучения
           .double-triangle
@@ -213,7 +224,7 @@ block content
                 p основы монтажа: основные понятия, крупность планов, виды переходов
                 p музыкальное сопровождение. откуда брать музыку, работа с авторским правом, виды музыкального сопровождения
             .line-text
-    section.section
+    section.section.section--about-study
       .container
         .info-block
           .info-block__left 
@@ -273,7 +284,7 @@ block content
                         stop(stop-color='#F9E0B0')
                         stop(offset='1', stop-color='#855024')
                   p.gold-text все, что вам нужно - это компьютер, интернет и желание освоить новую профессию.
-    section.section.section--black
+    section.section.section--black.section--about-author
       .container
         h2.section-title.section-title--white об авторе курса
           .double-triangle
@@ -288,12 +299,13 @@ block content
             .about__left
                 img.about__right_img(src="images/content/author.jpg")
             .about__right
+              .about__right-wrap
                 .text-block
                   p.text.text-subtitle.text-bold высшее образование:
                   p СПБГУПТД, бакалавр, специальность: дизайн.
                   p Дополнительное художественное образование в школе искусств.
-                p.text.text-subtitle.text-bold курсы повышения квалификации:
-                ul.text-list 
+                  p.text.text-subtitle.text-bold курсы повышения квалификации:
+                  ul.text-list 
                     li.text-list__item 3d Max
                     li.text-list__item Motion Design
                     li.text-list__item Режиссер рекламы
@@ -311,7 +323,7 @@ block content
                           stop(stop-color='#F9E0B0')
                           stop(offset='1', stop-color='#855024')
                   a.btn.btn--gold-gradient(href="") ХОЧУ ТАКЖЕ!
-    section.section
+    section.section#feedback
       .container
         h2.section-title работы учеников и отзывы
           .double-triangle
@@ -340,7 +352,7 @@ block content
             .feedback-text 
               .text-block.text-block--fs18
                 p   “Я организатор спортивных соревнований для питбулей.Когда возникла необходимость снять для них просто ролик,подобрать человека,кто сможет это осуществить оказалось сложной задачей.Многие отказывались снимать так как боятся собак,кто-то делал абсолютно не то,что требуется.Не мог раскрыть идею,характер и посыл наших состязаний.Поэтому Рина оказалась для нас настоящей находкой!все именно так,как я хотела!))Все снято очень «вкусно» и с нужного мне «угла») Как итог новые спортсмены в наших рядах и огромное количество просмотров и хвалебных отзывов))”
-    section.section.section--black
+    section.section.section--black#cost
       .container
         h2.section-title.section-title--white ТАРИФЫ
           .double-triangle
@@ -376,7 +388,7 @@ block content
                     li.card-list__item 1 пункт
               .card__block-btn
                 a.btn.btn--transparent(href="")  Купить
-    section.section
+    section.section#faq
       .container 
         h2.section-title программа обучения
           .double-triangle
@@ -435,7 +447,7 @@ block content
               .accordion-tab__text
                 p Да! Программа курса рассчитана на новичков. Не важно, кем вы сейчас работаете и был ли у вас дизайнерский опыт. На курсе есть целый раздел о том, как развить свою креативность и насмотренность.
             .line-text
-    section.section.section--black-bg
+    section.section.section--black-bg#application
       h2.section-title-bg выбор за вами!
       .container 
         .choice-wrap 

@@ -415,7 +415,7 @@ section {
 .line-quote-text {
   display: block;
   position: relative;
-  font-family: Georgia;
+  font-family: 'Georgia';
   font-size: 60px;
   line-height: 1;
   color: #FFFFFF;
@@ -583,79 +583,6 @@ video.video-feedback {
     -webkit-text-fill-color: transparent;
   }
 }
-
-@keyframes triangle-animte {   
-  0% {     
-    top: 0px;
-  }   
-  10% {     
-    top: 2px;   
-  }   
-  20% {     
-    top: 4px;   
-  }   
-  30% {    
-    top: 6px;   
-  }  
-  40% {     
-    top: 8px;   
-  } 
-  50% {
-    top: 10px; 
-  } 
-  60% {
-    top: 8px; 
-  } 
-  70% {
-    top: 6px; 
-  } 
-  80% {
-    top: 4px; 
-  } 
-  90% {
-    top: 2px; 
-  } 
-  100% {
-    top: 0px; 
-  }
-}
-
-@keyframes triangle-animte-left {   
-  0% {     
-    left: -6px;
-  }   
-  10% {     
-    left: -4px;   
-  }   
-  20% {     
-    left: -2px;   
-  }   
-  30% {    
-    left: 0px;   
-  }  
-  40% {     
-    left: 2px;   
-  } 
-  50% {
-    left: 4px; 
-  } 
-  60% {
-    left: 2px; 
-  } 
-  70% {
-    left: 0px; 
-  } 
-  80% {
-    left: -2px; 
-  } 
-  90% {
-    left: -4px; 
-  } 
-  100% {
-    left: -6px; 
-  }
-}
-
 
 // OWL
 .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {

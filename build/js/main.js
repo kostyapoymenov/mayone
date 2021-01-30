@@ -1,21 +1,55 @@
 $(document).ready(function(){
+
+  // ГЛАВНАЯ СТРАНИЦА
+  if(window.location.pathname.slice(1) == '') {
+
+    var menuArr = ['hero', 'about', 'portfolio', 'service', 'feedback', 'application'];
+
+    $(function(){
+      $(window).scroll(function(){
+        scroll_active(menuArr);
+      });
+    }); // активный пункт бургер меню при скроле
+
+    if($('.stat-section').length > 0){
+      numberUp(); // увеличение чисел при скролле
+    }
+    popupShow(); // модальные окна с видео портфолио
+  }
+
+  
+  // СТРАНИЦА КУРСЫ
+  if(window.location.pathname.slice(1) == 'courses.html') {
+
+    var menuArr = ['first', 'about', 'programs', 'cost', 'faq', 'application'];
+
+    $(function(){
+      $(window).scroll(function(){
+        scroll_active(menuArr);
+      });
+    }); // активный пункт бургер меню при скроле
+    setTimeout(() => {
+      $('.first__content-desc').addClass('active');
+      $('.first__content-animation-block').addClass('active');
+    }, 100);
+
+    startAnimationBlock('.section-profession');
+    startAnimationBlock('#about');
+    startAnimationBlock('.section--about-study');
+    startAnimationBlock('.section--about-author');
+    startAnimationBlock('#application');
+  }
+
+
   $(".owl-carousel").owlCarousel({
     items: 1,
     loop: true,
     nav: true
   });
-
-  burger(); // работа бунгера на мобильниках
-  if($('.stat-section').length > 0){
-    console.log('aaaa');
-    numberUp(); // увеличение чисел при скролле
-  }
-  popupShow(); // модальные окна с видео портфолио
+  burger(); // работа бургера на мобильниках
   menuScroll(); // активный пункт главного меню при скроле
-  jQuery(function(){
-    // jQuery(window).scroll(scroll_active);
-  }); // активный пункт бургер меню при скроле
   modalForm();
+
 
   function numberUp(){
     var show = true;
@@ -37,6 +71,18 @@ $(document).ready(function(){
           show = false;
        });    
       }
+    });
+  }
+  function startAnimationBlock(block){
+    var show = true;
+    $(window).on("scroll load resize", function () {
+      if (!show) return false;
+      var h_scroll = $(window).scrollTop() + 300;
+      var elem_top = $(block).offset().top;
+      if(h_scroll >= elem_top){
+        $(block).addClass('animation');
+        show = false;
+       }; 
     });
   }
   function burger(){
@@ -142,48 +188,86 @@ $(document).ready(function(){
       }
     });
   }
-  function scroll_active() {
+  function scroll_active(arr) {
     const menuItem = $('.nav__link');
     const menuBurgerItem = $('.burger-nav__link');
     /* вычисляем значения прокрутки страницы по вертикали */
     var window_top = $(window).scrollTop();
     /* вычисляем положение якорей на странице от начала страницы  по вертикали*/
-    var hero_top = $('#hero').offset().top - 50;
-    var about_top = $('#about').offset().top - 200;
-    var portfolio_top = $('#portfolio').offset().top - 200;
-    var service_top = $('#service').offset().top - 200;
-    var feedback_top = $('#feedback').offset().top - 200;
-    var application_top = $('#application').offset().top - 360;
+    // var hero_top = $('#hero').offset().top - 50;
+    // var about_top = $('#about').offset().top - 200;
+    // var portfolio_top = $('#portfolio').offset().top - 200;
+    // var service_top = $('#service').offset().top - 200;
+    // var feedback_top = $('#feedback').offset().top - 200;
+    // var application_top = $('#application').offset().top - 360;
+
+    var hero_top, 
+        about_top,
+        portfolio_top,
+        service_top,
+        feedback_top,
+        application_top,
+        cost_top,
+        faq_top,
+        programs_top,
+        first_top;
+
+    arr.forEach(function(entry) {
+      if(entry == 'hero') {
+        hero_top = $(`#${entry}`).offset().top - 50;
+      } else if (entry == 'about') {
+        about_top = $(`#${entry}`).offset().top - 250;
+      } else if (entry == 'portfolio') {
+        portfolio_top = $(`#${entry}`).offset().top - 250;
+      } else if (entry == 'service') {
+        service_top = $(`#${entry}`).offset().top - 250;
+      } else if (entry == 'feedback') {
+        feedback_top = $(`#${entry}`).offset().top - 250;
+      } else if(entry == 'application') {
+        application_top = $(`#${entry}`).offset().top - 360;
+      } else if (entry == 'faq') {
+        faq_top = $(`#${entry}`).offset().top - 250;
+      } else if (entry == 'cost') {
+        cost_top = $(`#${entry}`).offset().top - 250;
+      } else if (entry == 'programs') {
+        programs_top = $(`#${entry}`).offset().top - 250;
+      } else if (entry == 'first') {
+        first_top = $(`#${entry}`).offset().top - 250;
+      }
+    });
+
+    menuItem.removeClass("nav__link--active");
+    menuBurgerItem.removeClass("nav__link--active");
 
     if (window_top > application_top) {
-      menuItem.removeClass("nav__link--active");
-      menuBurgerItem.removeClass("nav__link--active");
       $('a[href="#application"]').addClass("nav__link--active");
     }
     else if (window_top > feedback_top) {
-      menuItem.removeClass("nav__link--active");
-      menuBurgerItem.removeClass("nav__link--active");
       $('a[href="#feedback"]').addClass("nav__link--active");
     }
     else if (window_top > service_top) {
-      menuItem.removeClass("nav__link--active");
-      menuBurgerItem.removeClass("nav__link--active");
       $('a[href="#service"]').addClass("nav__link--active");
     }
     else if (window_top > portfolio_top) {
-      menuItem.removeClass("nav__link--active");
-      menuBurgerItem.removeClass("nav__link--active");
       $('a[href="#portfolio"]').addClass("nav__link--active");
     }
+    else if (window_top > faq_top) {
+      $('a[href="#faq"]').addClass("nav__link--active");
+    }
+    else if (window_top > cost_top) {
+      $('a[href="#cost"]').addClass("nav__link--active");
+    }
+    else if (window_top > programs_top) {
+      $('a[href="#programs"]').addClass("nav__link--active");
+    }
     else if (window_top > about_top) {
-      menuItem.removeClass("nav__link--active");
-      menuBurgerItem.removeClass("nav__link--active");
       $('a[href="#about"]').addClass("nav__link--active");
     }
     else if (window_top > hero_top) {
-      menuItem.removeClass("nav__link--active");
-      menuBurgerItem.removeClass("nav__link--active");
       $('a[href="#hero"]').addClass("nav__link--active");
+    }
+    else if (window_top > first_top) {
+      $('a[href="#first"]').addClass("nav__link--active");
     }
   }
   function modalForm(){
@@ -298,7 +382,6 @@ $(document).ready(function(){
       resize: resize
     });
   }
-
   window.accordion = Accordion();
   accordion.init(
     {

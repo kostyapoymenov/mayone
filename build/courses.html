@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MAYONE.PRO</title>
     <link rel="shortcut icon" href="images/content/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
     <header class="header">
@@ -22,7 +22,7 @@
               <li class="nav__item"><a class="nav__link" href="#about" onclick="return anchorScroller(this)">О курсе</a></li>
               <li class="nav__item"><a class="nav__link" href="#programs" onclick="return anchorScroller(this)">Программа</a></li>
               <li class="nav__item"><a class="nav__link" href="#cost" onclick="return anchorScroller(this)">Стоимость</a></li>
-              <li class="nav__item"><a class="nav__link" href="#feedback" onclick="return anchorScroller(this)">FAQ</a></li>
+              <li class="nav__item"><a class="nav__link" href="#faq" onclick="return anchorScroller(this)">FAQ</a></li>
               <li class="nav__item"><a class="nav__link" href="#application" onclick="return anchorScroller(this)">Обучение</a></li>
             </ul>
           </nav>
@@ -49,9 +49,13 @@
           <div class="first__content">
             <div class="first__content-description">
               <h1 class="first__content_title">авторский курс от rina mayone<span class="first__content_subtitle">Motion - design с нуля</span></h1>
-              <div class="line-quote-text">"</div>
-              <p class="first__content_text">“Когда вы покупаете обучение, вы получаете не просто объяснение команд, которые нужно использовать.</p>
-              <p class="first__content_text first__content_text--short text-bold">Вы покупаете навык и возможность зарабатывать на том, что нравится”</p>
+              <div class="first__content-desc">
+                <div class="line-quote-text">"</div>
+                <div class="first__content-animation-block">
+                  <p class="first__content_text">“Когда вы покупаете обучение, вы получаете не просто объяснение команд, которые нужно использовать.</p>
+                  <p class="first__content_text first__content_text--short text-bold">Вы покупаете навык и возможность зарабатывать на том, что нравится”</p>
+                </div>
+              </div>
             </div>
             <div class="first__content_btns">
               <div class="btn btn--gold-gradient">ЗАПИСАТЬСЯ</div>
@@ -95,7 +99,11 @@
           <div class="card-block card-block--three-card card-block--three-card--responsive">
             <div class="card-block__item">
               <div class="card--icon-text">
-                <div class="card-icon"><img src="images/icons/profession-1.png" alt=""></div>
+                <div class="card-icon">
+                  <div class="card-icon-cilce card-icon-cilce-one"></div>
+                  <div class="card-icon-cilce card-icon-cilce-two"></div>
+                  <div class="card-icon-cilce card-icon-cilce-three"></div><img src="images/icons/profession-1.png" alt="">
+                </div>
                 <div class="card-description">
                   <p class="text-bold">Видео - это 80%  контента в интернете.</p>
                   <p>И популярность этого формата только растет. А специалистов, умеющих работать в проф.софте катастрофически не хватает.</p>
@@ -104,7 +112,11 @@
             </div>
             <div class="card-block__item">
               <div class="card--icon-text">
-                <div class="card-icon"><img src="images/icons/profession-2.png" alt=""></div>
+                <div class="card-icon">
+                  <div class="card-icon-cilce card-icon-cilce-one"></div>
+                  <div class="card-icon-cilce card-icon-cilce-two"></div>
+                  <div class="card-icon-cilce card-icon-cilce-three"></div><img src="images/icons/profession-2.png" alt="">
+                </div>
                 <div class="card-description">
                   <p>Пока остальные монтируют по шаблонам на телефоне, вы учитесь создавать <span class="text-bold">уникальные творческие проекты </span>для любых сфер.</p>
                   <p>И выходите на рынок, как специалист.</p>
@@ -113,7 +125,11 @@
             </div>
             <div class="card-block__item">
               <div class="card--icon-text">
-                <div class="card-icon"><img src="images/icons/profession-3.png" alt=""></div>
+                <div class="card-icon">
+                  <div class="card-icon-cilce card-icon-cilce-one"></div>
+                  <div class="card-icon-cilce card-icon-cilce-two"></div>
+                  <div class="card-icon-cilce card-icon-cilce-three"></div><img src="images/icons/profession-3.png" alt="">
+                </div>
                 <div class="card-description">
                   <p>КАЧЕСТВЕННЫЙ ВИДЕОКОНТЕНТ УВЕЛИЧИВАЕТ <span class="text-bold"> ВОВЛЕЧЕННОСТЬ, ПРОДАЖИ И ДОВЕРИЕ. </span>это ТРИ САМЫХ ВАЖНЫХ ПОКАЗАТЕЛЯ ДЛЯ ЛЮБых ПРЕДПРИНИМАТЕЛей, и они готовы за них платить</p>
                 </div>
@@ -123,7 +139,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="about">
       <div class="container">
         <div class="info-block">
           <div class="info-block__left"> 
@@ -186,7 +202,7 @@
         </div>
       </div>
     </section>
-    <section class="section section--black">
+    <section class="section section--black" id="programs">
       <div class="container"> 
         <h2 class="section-title section-title--white">программа обучения
           <div class="double-triangle">
@@ -261,7 +277,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section section--about-study">
       <div class="container">
         <div class="info-block">
           <div class="info-block__left"> 
@@ -351,7 +367,7 @@
         </div>
       </div>
     </section>
-    <section class="section section--black">
+    <section class="section section--black section--about-author">
       <div class="container">
         <h2 class="section-title section-title--white">об авторе курса
           <div class="double-triangle">
@@ -370,41 +386,43 @@
         <div class="about about--new">
           <div class="about__left"><img class="about__right_img" src="images/content/author.jpg"></div>
           <div class="about__right">
-            <div class="text-block">
-              <p class="text text-subtitle text-bold">высшее образование:</p>
-              <p>СПБГУПТД, бакалавр, специальность: дизайн.</p>
-              <p>Дополнительное художественное образование в школе искусств.</p>
-            </div>
-            <p class="text text-subtitle text-bold">курсы повышения квалификации:</p>
-            <ul class="text-list"> 
-              <li class="text-list__item">3d Max</li>
-              <li class="text-list__item">Motion Design</li>
-              <li class="text-list__item">Режиссер рекламы</li>
-            </ul>
-            <div class="line-quote-text">" </div>
-            <div class="text-block text-small">
-              <p>«Я начинала в профессии видеомейкера с полного нуля, без знакомых и связей. я знаю, что такое получать отказ за отказом, просто потому что ты новичок и не знаешь,как действовать. я прошла путь от мелких заказов за 500 руб. до заработка от 100 тыс. руб в месяц только на монтаже. и теперь помогаю другим не допускать такие же ошибки!</p>
-              <p>Мы привыкли ругать себя, обесценивать свой труд и говорить о том, что у нас просто нет творческого таланта. Так вот таланта действительно не существует! Существует упорный труд и развитие насмотренности. Каждый может стать творческим специалистом и зарабатывать на том, что вдохновляет!»</p>
-            </div>
-            <div class="about__block-btn">
-              <div class="double-triangle-left">
-                <svg class="double-triangle-left_svg" width="44" height="42" viewbox="0 0 44 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M43.3052 20.7678L16.7685 38.7533L16.7685 2.78236L43.3052 20.7678Z" fill="white"></path>
-                  <path d="M10.0771 4.66816L33.8314 20.7678L10.0771 36.8675L10.0771 4.66816Z" stroke="url(#paint0_linear)" stroke-width="2"></path>
-                  <defs>
-                    <lineargradient id="paint0_linear" x1="35.6138" y1="20.7678" x2="0.231564" y2="20.7678" gradientunits="userSpaceOnUse">
-                      <stop stop-color="#F9E0B0"></stop>
-                      <stop offset="1" stop-color="#855024"></stop>
-                    </lineargradient>
-                  </defs>
-                </svg>
-              </div><a class="btn btn--gold-gradient" href="">ХОЧУ ТАКЖЕ!</a>
+            <div class="about__right-wrap">
+              <div class="text-block">
+                <p class="text text-subtitle text-bold">высшее образование:</p>
+                <p>СПБГУПТД, бакалавр, специальность: дизайн.</p>
+                <p>Дополнительное художественное образование в школе искусств.</p>
+                <p class="text text-subtitle text-bold">курсы повышения квалификации:</p>
+                <ul class="text-list"> 
+                  <li class="text-list__item">3d Max</li>
+                  <li class="text-list__item">Motion Design</li>
+                  <li class="text-list__item">Режиссер рекламы</li>
+                </ul>
+              </div>
+              <div class="line-quote-text">" </div>
+              <div class="text-block text-small">
+                <p>«Я начинала в профессии видеомейкера с полного нуля, без знакомых и связей. я знаю, что такое получать отказ за отказом, просто потому что ты новичок и не знаешь,как действовать. я прошла путь от мелких заказов за 500 руб. до заработка от 100 тыс. руб в месяц только на монтаже. и теперь помогаю другим не допускать такие же ошибки!</p>
+                <p>Мы привыкли ругать себя, обесценивать свой труд и говорить о том, что у нас просто нет творческого таланта. Так вот таланта действительно не существует! Существует упорный труд и развитие насмотренности. Каждый может стать творческим специалистом и зарабатывать на том, что вдохновляет!»</p>
+              </div>
+              <div class="about__block-btn">
+                <div class="double-triangle-left">
+                  <svg class="double-triangle-left_svg" width="44" height="42" viewbox="0 0 44 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M43.3052 20.7678L16.7685 38.7533L16.7685 2.78236L43.3052 20.7678Z" fill="white"></path>
+                    <path d="M10.0771 4.66816L33.8314 20.7678L10.0771 36.8675L10.0771 4.66816Z" stroke="url(#paint0_linear)" stroke-width="2"></path>
+                    <defs>
+                      <lineargradient id="paint0_linear" x1="35.6138" y1="20.7678" x2="0.231564" y2="20.7678" gradientunits="userSpaceOnUse">
+                        <stop stop-color="#F9E0B0"></stop>
+                        <stop offset="1" stop-color="#855024"></stop>
+                      </lineargradient>
+                    </defs>
+                  </svg>
+                </div><a class="btn btn--gold-gradient" href="">ХОЧУ ТАКЖЕ!</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="feedback">
       <div class="container">
         <h2 class="section-title">работы учеников и отзывы
           <div class="double-triangle">
@@ -447,7 +465,7 @@
         </div>
       </div>
     </section>
-    <section class="section section--black">
+    <section class="section section--black" id="cost">
       <div class="container">
         <h2 class="section-title section-title--white">ТАРИФЫ
           <div class="double-triangle">
@@ -499,7 +517,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="faq">
       <div class="container"> 
         <h2 class="section-title">программа обучения
           <div class="double-triangle">
@@ -568,7 +586,7 @@
         </div>
       </div>
     </section>
-    <section class="section section--black-bg">
+    <section class="section section--black-bg" id="application">
       <h2 class="section-title-bg">выбор за вами!</h2>
       <div class="container"> 
         <div class="choice-wrap"> 

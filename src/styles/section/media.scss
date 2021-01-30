@@ -173,6 +173,9 @@
   }
 }
 @include tablets {
+  .section{
+    overflow: hidden;
+  }
   .nav {
     width: 85%;
   }
@@ -239,6 +242,7 @@
   }
   .hero-background {
     background: url(../images/bg/hero_mobile.png) no-repeat;
+    background-size: cover;
   }
   .header {
     padding: rem(15px) 0 rem(15px);
@@ -491,7 +495,7 @@
     padding: 0 0 40px;
   }
   .first__pictures {
-    width: 60%;
+    width: 90%;
   }
   .info-block__left {
     max-width: 300px;
@@ -537,6 +541,14 @@
   }
   .first__content_text {
     width: 100%;
+  }
+  .choice__item {
+    width: 92%;
+    &-btn {
+      .btn {
+        width: 100%;
+      }
+    }
   }
 }
 @include phones-xs {

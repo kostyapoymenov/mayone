@@ -19,6 +19,7 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     margin-bottom: rem(30px);
+    background-color: #000000;
   }
   &_subtitle {
     font-family: 'FuturaPT', sans-serif;
@@ -54,6 +55,20 @@
   &_btns {
     .btn {
       margin-right: 10px;
+    }
+  }
+  &-desc {
+    opacity: 0;
+    transition: all .9s ease;
+    &.active {
+      opacity: 1;
+      transition: all .9s ease;
+    }
+  }
+  &-animation-block {
+    
+    &.active {
+      animation: text-animte-top-opacity .2s ease-in-out ;
     }
   }
 }
